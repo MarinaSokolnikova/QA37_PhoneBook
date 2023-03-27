@@ -6,6 +6,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.Wait;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.time.Duration;
@@ -60,6 +61,21 @@ public class HelperUser extends HelperBase{
     public boolean isAlertPresent(String message) {
         WebDriverWait wait = new WebDriverWait(wd, Duration.ofSeconds(5));
         Alert alert = wait.until(ExpectedConditions.alertIsPresent());
+        if(alert != null && alert.getText().equals(message)){
+            //click ok
+            alert.accept();
+            //click cancel ---> alert.dismiss();
+            //type into alert ---> alert.sendKeys("hello");
+
+
+            return true;
+        }
+        return false;
+    }
+
+    public boolean isAlertPresent2(String message) {
+        WebDriverWait wait = new WebDriverWait(wd, Duration.ofSeconds(5));
+        Alert alert = wait.until(ExpectedConditions.alertIsPresent());
         if(alert != null && alert.getText().contains(message)){
             //click ok
             alert.accept();
@@ -78,5 +94,11 @@ public class HelperUser extends HelperBase{
 
     public boolean contacts() {
         return isElementPresent(By.cssSelector("[href='/contacts']"));
+    }
+
+    public boolean noContactsHere() {
+        WebDriverWait wait = new WebDriverWait(wd, Duration.ofSeconds(5));
+        return wait.until(ExpectedConditions.textToBePresentInElement(wd.findElement(By.cssSelector(".contact-page_message__2qafk>h1")), "No Contacts here!"));
+
     }
 }

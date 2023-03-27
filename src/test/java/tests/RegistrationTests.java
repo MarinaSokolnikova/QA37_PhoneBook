@@ -31,39 +31,34 @@ public class RegistrationTests extends TestBase{
 
         //Assert.assertTrue(app.getHelperUser().isLogged());
         Assert.assertTrue(app.getHelperUser().contacts());
+        Assert.assertTrue(app.getHelperUser().noContactsHere());
     }
 
     @Test
     public void registrationWrongEmail(){
-        Random random = new Random();
-        int i = random.nextInt(1000);
-
-        User user = new User().setEmail("ssa"+i+"gmail.com").setPassword("Ssa12345$");
+        User user = new User().setEmail("ssagmail.com").setPassword("Ssa12345$");
 
         app.getHelperUser().openLoginRegistrationForm();
         app.getHelperUser().fillLoginRegistrationForm(user);
         app.getHelperUser().submitRegistration();
 
-        Assert.assertTrue(app.getHelperUser().isAlertPresent("Wrong email or password format"));
+        Assert.assertTrue(app.getHelperUser().isAlertPresent2("Wrong email or password format"));
     }
 
     @Test
     public void registrationWrongPassword(){
-        Random random = new Random();
-        int i = random.nextInt(1000);
-
-        User user = new User().setEmail("ssa"+i+"@gmail.com").setPassword("ssa12345$");
+        User user = new User().setEmail("don@gmail.com").setPassword("ssa12345$");
 
         app.getHelperUser().openLoginRegistrationForm();
         app.getHelperUser().fillLoginRegistrationForm(user);
         app.getHelperUser().submitRegistration();
 
-        Assert.assertTrue(app.getHelperUser().isAlertPresent("Wrong email or password format"));
+        Assert.assertTrue(app.getHelperUser().isAlertPresent2("Wrong email or password format"));
     }
 
     @Test
     public void registrationUserRegistered(){
-        User user = new User().setEmail("ssa"+"@gmail.com").setPassword("Asa12345$");
+        User user = new User().setEmail("ssa@gmail.com").setPassword("Ssa12345$");
 
         app.getHelperUser().openLoginRegistrationForm();
         app.getHelperUser().fillLoginRegistrationForm(user);
