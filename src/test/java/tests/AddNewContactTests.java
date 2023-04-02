@@ -13,10 +13,9 @@ public class AddNewContactTests extends TestBase{
 
     @BeforeClass
     public void preCondition(){
-        User user = new User().setEmail("ssa@gmail.com").setPassword("Ssa12345$");
-        app.getHelperUser().openLoginRegistrationForm();
-        app.getHelperUser().fillLoginRegistrationForm(user);
-        app.getHelperUser().submitLogin();
+        if (!app.getHelperUser().isLogged()){
+            app.getHelperUser().login(new User().setEmail("ssa@gmail.com").setPassword("Ssa12345$"));
+        }
     }
 
     @Test
@@ -32,6 +31,7 @@ public class AddNewContactTests extends TestBase{
                 .address("Tel Aviv")
                 .description("my friend")
                 .build();
+
         app.getHelperContact().openAddForm();
         app.getHelperContact().fillAddForm(contact);
         app.getHelperContact().submitSave();
