@@ -1,14 +1,13 @@
 package models;
 
-import lombok.Builder;
-import lombok.Getter;
-import lombok.Setter;
-import lombok.ToString;
+import lombok.*;
 
 @Setter
 @Getter
 @ToString
 @Builder
+@NoArgsConstructor
+@AllArgsConstructor
 
 public class Contact {
     private String name;

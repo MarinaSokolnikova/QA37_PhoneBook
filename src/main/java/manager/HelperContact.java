@@ -3,6 +3,9 @@ package manager;
 import models.Contact;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+
+import java.util.List;
 
 public class HelperContact extends HelperBase{
     public HelperContact(WebDriver wd) {
@@ -24,5 +27,10 @@ public class HelperContact extends HelperBase{
 
     public void submitSave() {
         click(By.xpath("//div[@class='add_form__2rsm2']/button"));
+    }
+
+
+    public boolean isAddPageStillDisplayed() {
+        return isElementPresent(By.cssSelector("a.active[href='/add']"));
     }
 }
