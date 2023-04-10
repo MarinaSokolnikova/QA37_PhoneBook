@@ -4,6 +4,7 @@ import models.Contact;
 import models.User;
 import org.openqa.selenium.By;
 import org.testng.Assert;
+import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
@@ -63,8 +64,8 @@ public class AddNewContactTests extends TestBase{
 
         Contact contact = Contact.builder()
                 .name("")
-                .lastName("Smit")
-                .phone("6471746178123")
+                .lastName("Smit111111111111111111111111111")
+                .phone("111111111111")
                 .email("bob@gmail.com")
                 .address("Tel Aviv")
                 .build();
@@ -98,7 +99,7 @@ public class AddNewContactTests extends TestBase{
     @Test
     public void addNewContactWrongLastName(){
         Contact contact = Contact.builder()
-                .name("Bob")
+                .name("Bobyyyyyyyyyyyyyyyyyyyyyyyyyy")
                 .lastName("")
                 .phone("6471746178123")
                 .email("bob@gmail.com")
@@ -147,6 +148,8 @@ public class AddNewContactTests extends TestBase{
         app.getHelperContact().submitSave();
         Assert.assertTrue(app.getHelperUser().isAlertPresent2("Email not valid:"));
     }
+
+
 
 
 }

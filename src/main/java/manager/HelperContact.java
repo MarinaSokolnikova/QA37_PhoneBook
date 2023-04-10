@@ -6,6 +6,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
 import java.util.List;
+import java.util.Random;
 
 public class HelperContact extends HelperBase{
     public HelperContact(WebDriver wd) {
@@ -32,5 +33,54 @@ public class HelperContact extends HelperBase{
 
     public boolean isAddPageStillDisplayed() {
         return isElementPresent(By.cssSelector("a.active[href='/add']"));
+    }
+
+
+    public void openContactsForm() {
+        click(By.cssSelector("[href='/contacts']"));
+    }
+
+    public void clickFirstContact() {
+        click(By.cssSelector(".contact-item_card__2SOIM"));
+    }
+
+    public void submitRemove() {
+        click(By.xpath("//button[text()='Remove']"));
+    }
+
+    public int getContactsCount() {
+        return wd.findElements(By.cssSelector(".contact-item_card__2SOIM")).size();
+    }
+
+
+    public void removeContact() {
+        clickFirstContact();
+        submitRemove();
+    }
+
+    public void provideContacts() {
+        if (getContactsCount() < 3)
+        {
+            while (getContactsCount() < 3)
+            {
+                addContact();
+            }
+        }
+    }
+
+    public void addContact() {
+        Random random = new Random();
+        int random2 = random.nextInt(1000);
+        Contact contact = Contact.builder()
+                .name("Cris")
+                .lastName("Braun")
+                .phone("917201736102"+ random2)
+                .email("cris" + random2 + "@gmail.com")
+                .address("Rehovot")
+                .build();
+        openAddForm();
+        fillAddForm(contact);
+        submitSave();
+
     }
 }

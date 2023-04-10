@@ -1,9 +1,6 @@
 package manager;
 
-import org.openqa.selenium.Alert;
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
+import org.openqa.selenium.*;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
@@ -21,10 +18,17 @@ public class HelperBase {
         WebElement element = wd.findElement(locator);
         element.click();
         element.clear();
+        clearNew(element);
         if (text != null)
         {
             element.sendKeys(text);
         }
+
+    }
+
+    public void clearNew(WebElement element){
+        element.sendKeys("a");
+        element.sendKeys(Keys.BACK_SPACE);
 
     }
 
@@ -51,5 +55,23 @@ public class HelperBase {
             return true;
         }
         return false;
+    }
+
+    public void pause(int time){
+        try {
+            Thread.sleep(time);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
+    }
+
+    public void back(){
+        wd.navigate().back();
+    }
+
+    public boolean noContactsHere() {
+        WebDriverWait wait = new WebDriverWait(wd, Duration.ofSeconds(5));
+        return wait.until(ExpectedConditions.textToBePresentInElement(wd.findElement(By.cssSelector(".contact-page_message__2qafk>h1")), "No Contacts here!"));
+
     }
 }
