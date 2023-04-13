@@ -21,14 +21,23 @@ public class RemoveContactTests extends TestBase{
     public void removeFirstContact(){
         // Assert size list less than one
         int contactsCountBeforeRemove = app.getHelperContact().getContactsCount();
+        logger.info("Number of contacts list before remove ---> "+contactsCountBeforeRemove);
         app.getHelperContact().openContactsForm();
         app.getHelperContact().clickFirstContact();
         app.getHelperContact().submitRemove();
         app.getHelperContact().pause(1000);//!!!
 
         int contactsCountAfterRemove = app.getHelperContact().getContactsCount();
+        logger.info("Number of contacts list after remove ---> "+contactsCountAfterRemove);
 
         Assert.assertEquals(contactsCountAfterRemove, (contactsCountBeforeRemove-1));
+    }
+
+    @Test
+    public void removeFirstContact2(){
+
+
+        Assert.assertEquals(app.getHelperContact().removeOneContact(), 1);
     }
 
     @Test

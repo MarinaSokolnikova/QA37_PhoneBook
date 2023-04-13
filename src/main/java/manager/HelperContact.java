@@ -27,6 +27,7 @@ public class HelperContact extends HelperBase{
     }
 
     public void submitSave() {
+        getScreenElement("src/test/screenshots/screen-btn.png", By.xpath("//div[@class='add_form__2rsm2']/button"));
         click(By.xpath("//div[@class='add_form__2rsm2']/button"));
     }
 
@@ -59,9 +60,10 @@ public class HelperContact extends HelperBase{
     }
 
     public void provideContacts() {
-            while (getContactsCount() < 3)
-            {
-                addContact();
+            if (getContactsCount() <3){
+                for (int i = 0; i <3; i++) {
+                    addContact();
+                }
             }
     }
 
@@ -83,5 +85,13 @@ public class HelperContact extends HelperBase{
 
     public boolean isContactPresent(Contact contact) {
         return isElementPresent(By.xpath("//div[@class='contact-item_card__2SOIM']/h3[text()='"+ contact.getPhone()+ "']"));
+    }
+
+    public int removeOneContact() {
+        int before = getContactsCount();
+        removeContact();
+        pause(1000);
+        int after = getContactsCount();
+        return before-after;
     }
 }

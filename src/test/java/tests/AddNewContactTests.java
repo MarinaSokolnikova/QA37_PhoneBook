@@ -23,6 +23,7 @@ public class AddNewContactTests extends TestBase{
     public void addContactSuccessAllFields() {
         Random random = new Random();
         int randomPhone = random.nextInt(1000);
+        int i = random.nextInt(1000);
         int randomEmail = random.nextInt(1000);
         Contact contact = Contact.builder()
                 .name("Bob")
@@ -30,7 +31,7 @@ public class AddNewContactTests extends TestBase{
                 .phone("6471746178"+ randomPhone)
                 .email("bob" + randomEmail + "@gmail.com")
                 .address("Tel Aviv")
-                .description("my friend")
+                .description("all fields")
                 .build();
 
         app.getHelperContact().openAddForm();
@@ -46,7 +47,7 @@ public class AddNewContactTests extends TestBase{
         int randomPhone = random.nextInt(1000);
         int randomEmail = random.nextInt(1000);
         Contact contact = Contact.builder()
-                .name("Cris")
+                .name("CrisReq")
                 .lastName("Braun")
                 .phone("917201736102"+ randomPhone)
                 .email("cris" + randomEmail + "@gmail.com")
@@ -68,6 +69,7 @@ public class AddNewContactTests extends TestBase{
                 .phone("111111111111")
                 .email("bob@gmail.com")
                 .address("Tel Aviv")
+                .description("wrong name")
                 .build();
 
         app.getHelperContact().openAddForm();
@@ -86,6 +88,7 @@ public class AddNewContactTests extends TestBase{
                 .phone("6471746178123")
                 .email("bob@gmail.com")
                 .address("")
+                .description("wrong address")
                 .build();
 
         app.getHelperContact().openAddForm();
@@ -98,16 +101,20 @@ public class AddNewContactTests extends TestBase{
 
     @Test
     public void addNewContactWrongLastName(){
+        Random random = new Random();
+        int i = random.nextInt(1000);
         Contact contact = Contact.builder()
                 .name("Bobyyyyyyyyyyyyyyyyyyyyyyyyyy")
                 .lastName("")
                 .phone("6471746178123")
                 .email("bob@gmail.com")
                 .address("Tel Aviv")
+                .description("wrong lastName")
                 .build();
 
         app.getHelperContact().openAddForm();
         app.getHelperContact().fillAddForm(contact);
+        app.getHelperContact().getScreen("src/test/screenshots/screen"+ i+ ".png");
         app.getHelperContact().submitSave();
 
         Assert.assertTrue(app.getHelperContact().isAddPageStillDisplayed());
@@ -122,6 +129,7 @@ public class AddNewContactTests extends TestBase{
                 .phone("")
                 .email("bob@gmail.com")
                 .address("Tel Aviv")
+                .description("wrong phone")
                 .build();
 
         app.getHelperContact().openAddForm();
@@ -141,6 +149,7 @@ public class AddNewContactTests extends TestBase{
                 .phone("6471746178123")
                 .email("bobgmail.com")
                 .address("Tel Aviv")
+                .description("wrong email")
                 .build();
 
         app.getHelperContact().openAddForm();
