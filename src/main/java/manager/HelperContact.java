@@ -59,13 +59,10 @@ public class HelperContact extends HelperBase{
     }
 
     public void provideContacts() {
-        if (getContactsCount() < 3)
-        {
             while (getContactsCount() < 3)
             {
                 addContact();
             }
-        }
     }
 
     public void addContact() {
