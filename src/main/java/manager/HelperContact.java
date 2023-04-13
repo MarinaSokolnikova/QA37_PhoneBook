@@ -80,4 +80,8 @@ public class HelperContact extends HelperBase{
         submitSave();
 
     }
+
+    public boolean isContactPresent(Contact contact) {
+        return isElementPresent(By.xpath("//div[@class='contact-item_card__2SOIM']/h3[text()='"+ contact.getPhone()+ "']"));
+    }
 }

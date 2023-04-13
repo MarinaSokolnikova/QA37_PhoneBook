@@ -37,7 +37,7 @@ public class AddNewContactTests extends TestBase{
         app.getHelperContact().fillAddForm(contact);
         app.getHelperContact().submitSave();
 
-        Assert.assertTrue(app.getHelperContact().isElementPresent(By.xpath("//div[@class='contact-item_card__2SOIM']/h3[text()='"+ contact.getPhone()+ "']")));
+        Assert.assertTrue(app.getHelperContact().isContactPresent(contact));
     }
 
     @Test
@@ -56,7 +56,7 @@ public class AddNewContactTests extends TestBase{
         app.getHelperContact().fillAddForm(contact);
         app.getHelperContact().submitSave();
 
-        Assert.assertTrue(app.getHelperUser().isElementPresent(By.xpath("//div[@class='contact-item_card__2SOIM']/h3[text()='"+ contact.getPhone()+ "']")));
+        Assert.assertTrue(app.getHelperContact().isContactPresent(contact));
     }
 
     @Test
