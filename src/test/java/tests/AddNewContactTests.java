@@ -16,11 +16,13 @@ public class AddNewContactTests extends TestBase{
     public void preCondition(){
         if (!app.getHelperUser().isLogged()){
             app.getHelperUser().login(new User().setEmail("ssa@gmail.com").setPassword("Ssa12345$"));
+            logger.info("Before class logged in account with data ---> email: 'ssa@gmail.com', password: 'Ssa12345$'");
         }
     }
 
     @Test
     public void addContactSuccessAllFields() {
+
         Random random = new Random();
         int randomPhone = random.nextInt(1000);
         int i = random.nextInt(1000);
@@ -34,11 +36,14 @@ public class AddNewContactTests extends TestBase{
                 .description("all fields")
                 .build();
 
+        logger.info("Test data ---> name: 'Bob', lastName: 'Smit', phone: 6471746178"+randomPhone+ ", email: bob"+randomEmail+"@gmail.com, address: 'Tel Aviv', description: 'all fields'");
+
         app.getHelperContact().openAddForm();
         app.getHelperContact().fillAddForm(contact);
         app.getHelperContact().submitSave();
 
         Assert.assertTrue(app.getHelperContact().isContactPresent(contact));
+        logger.info("Assert check is Element contact present");
     }
 
     @Test
@@ -53,19 +58,22 @@ public class AddNewContactTests extends TestBase{
                 .email("cris" + randomEmail + "@gmail.com")
                 .address("Rehovot")
                 .build();
+
+        logger.info("Test data ---> name: 'CrisReq', lastName: 'Braun', phone: 917201736102"+randomPhone+ ", email: cris"+randomEmail+"@gmail.com, address: 'Rehovot'");
         app.getHelperContact().openAddForm();
         app.getHelperContact().fillAddForm(contact);
         app.getHelperContact().submitSave();
 
         Assert.assertTrue(app.getHelperContact().isContactPresent(contact));
+        logger.info("Assert check is Element contact present");
     }
 
     @Test
     public void addNewContactWrongName(){
-
+        logger.info("Test data ---> name: '', lastName: 'Smit', phone: '111111111111', email: 'bob@gmail.com', address: 'Tel Aviv', description: 'wrong name'");
         Contact contact = Contact.builder()
                 .name("")
-                .lastName("Smit111111111111111111111111111")
+                .lastName("Smit")
                 .phone("111111111111")
                 .email("bob@gmail.com")
                 .address("Tel Aviv")
@@ -77,11 +85,13 @@ public class AddNewContactTests extends TestBase{
         app.getHelperContact().submitSave();
 
         Assert.assertTrue(app.getHelperContact().isAddPageStillDisplayed());
+        logger.info("Assert check is Element contact present");
 
     }
 
     @Test
     public void addNewContactWrongAddress(){
+        logger.info("Test data ---> name: 'Bob', lastName: 'Smit', phone: '6471746178123', email: 'bob@gmail.com', address: '', description: 'wrong address'");
         Contact contact = Contact.builder()
                 .name("Bob")
                 .lastName("Smit")
@@ -96,18 +106,19 @@ public class AddNewContactTests extends TestBase{
         app.getHelperContact().submitSave();
 
         Assert.assertTrue(app.getHelperContact().isAddPageStillDisplayed());
-
+        logger.info("Assert check is add page still displayed");
     }
 
     @Test
     public void addNewContactWrongLastName(){
+        logger.info("Test data ---> name: 'Boby', lastName: '', phone: '6471746178123', email: 'boby@gmail.com', address: '', description: 'wrong lastName'");
         Random random = new Random();
         int i = random.nextInt(1000);
         Contact contact = Contact.builder()
-                .name("Bobyyyyyyyyyyyyyyyyyyyyyyyyyy")
+                .name("Boby")
                 .lastName("")
                 .phone("6471746178123")
-                .email("bob@gmail.com")
+                .email("boby@gmail.com")
                 .address("Tel Aviv")
                 .description("wrong lastName")
                 .build();
@@ -118,11 +129,13 @@ public class AddNewContactTests extends TestBase{
         app.getHelperContact().submitSave();
 
         Assert.assertTrue(app.getHelperContact().isAddPageStillDisplayed());
+        logger.info("Assert check is add page still displayed");
 
     }
 
     @Test
     public void addNewContactWrongPhone(){
+        logger.info("Test data ---> name: 'Bob', lastName: 'Smit', phone: '', email: 'bob@gmail.com', address: 'Tel Aviv', description: 'wrong phone'");
         Contact contact = Contact.builder()
                 .name("Bob")
                 .lastName("Smit")
@@ -137,12 +150,14 @@ public class AddNewContactTests extends TestBase{
         app.getHelperContact().submitSave();
 
         Assert.assertTrue(app.getHelperContact().isAddPageStillDisplayed());
+        logger.info("Assert check is add page still displayed");
         Assert.assertTrue(app.getHelperContact().isAlertPresent(" Phone not valid: Phone number must contain only digits! And length min 10, max 15!"));
-
+        logger.info("Assert check is alert present with error text ' Phone not valid: Phone number must contain only digits! And length min 10, max 15!'");
     }
 
     @Test
     public void addNewContactWrongEmail(){
+        logger.info("Test data ---> name: 'Bob', lastName: 'Smit', phone: '6471746178123', email: 'bobgmail.com', address: 'Tel Aviv', description: 'wrong email'");
         Contact contact = Contact.builder()
                 .name("Bob")
                 .lastName("Smit")
@@ -156,6 +171,7 @@ public class AddNewContactTests extends TestBase{
         app.getHelperContact().fillAddForm(contact);
         app.getHelperContact().submitSave();
         Assert.assertTrue(app.getHelperUser().isAlertPresent2("Email not valid:"));
+        logger.info("Assert check is alert present with error text 'Email not valid:'");
     }
 
 

@@ -69,5 +69,6 @@ public class LoginTests extends TestBase{
         app.getHelperUser().submitLogin();
 
         Assert.assertTrue(app.getHelperUser().isAlertPresent("Wrong email or password"));
+        logger.info("Assert check is alert present with error text 'Wrong email or password'");
     }
 }

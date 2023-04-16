@@ -1,0 +1,6 @@
+19:20:12.256  INFO  manager.ApplicationManager - All tests run in Chrome Browser
+19:20:13.023  INFO  manager.ApplicationManager - The link --->https://telranedu.web.app/home
+19:20:18.863  INFO  tests.TestBase - Before class logged in account with data ---> email: 'ssa@gmail.com', password: 'Ssa12345$'
+19:20:18.889  INFO  tests.TestBase - Name of method ---> addContactSuccessAllFields
+19:20:18.916  INFO  tests.TestBase - Test data ---> name: 'Bob', lastName: 'Smit', phone: 6471746178365, email: bob549@gmail.com, address: 'Tel Aviv', description: 'all fields'
+19:20:22.268  INFO  tests.TestBase - Assert check is Element contact present
