@@ -1,0 +1,26 @@
+19:30:32.820  INFO  manager.ApplicationManager - All tests run in Chrome Browser
+19:30:35.008  INFO  manager.ApplicationManager - The link --->https://telranedu.web.app/home
+19:30:35.067  INFO  tests.TestBase - Name of method ---> loginSuccess
+19:30:35.071  INFO  manager.ListenerWD - Before Find Elements --->By.xpath: //button[text()='Sign Out']
+19:30:40.136  INFO  manager.ListenerWD - After Find Elements --->By.xpath: //button[text()='Sign Out']
+19:30:40.140  INFO  manager.ListenerWD - List of elements is ---> 0
+19:30:40.143  INFO  tests.TestBase - Start test with name 'loginSuccess'
+19:30:40.143  INFO  tests.TestBase - Test data ---> email: 'ssa@gmail.com' & password: 'Ssa12345$'
+19:30:40.144  INFO  manager.ListenerWD - Before Find Element --->By.cssSelector: [href='/login']
+19:30:40.215  INFO  manager.ListenerWD - After Find Element --->By.cssSelector: [href='/login']
+19:30:40.238  INFO  manager.ListenerWD - Location of element(1426, 34)
+19:30:40.329  INFO  manager.ListenerWD - Before Find Element --->By.name: email
+19:30:40.385  INFO  manager.ListenerWD - After Find Element --->By.name: email
+19:30:40.405  INFO  manager.ListenerWD - Location of element(568, 250)
+19:30:40.699  INFO  manager.ListenerWD - Before Find Element --->By.xpath: //input[la]
+19:30:45.748  INFO  manager.ListenerWD - Huston we have a problem
+19:30:45.749  INFO  manager.ListenerWD - Object target ---> ChromeDriver: chrome on WINDOWS (16f6c8060fe466f308b45b7ef18d1cb4)
+19:30:45.749  INFO  manager.ListenerWD - ********************
+19:30:45.749  INFO  manager.ListenerWD - findElement
+19:30:45.750  INFO  manager.ListenerWD - ********************
+19:30:45.751  INFO  manager.ListenerWD - InvocationTargetException1java.lang.reflect.InvocationTargetException
+19:30:45.751  INFO  manager.ListenerWD - ********************
+19:30:45.752  INFO  manager.ListenerWD - InvocationTargetException2null
+19:30:45.752  INFO  manager.ListenerWD - ********************
+19:30:45.753  INFO  manager.ListenerWD - InvocationTargetException3java.lang.reflect.InvocationTargetException
+19:30:45.753  INFO  manager.ListenerWD - ********************

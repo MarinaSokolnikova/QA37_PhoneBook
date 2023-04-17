@@ -1,0 +1,8 @@
+13:56:47.270  INFO  manager.ApplicationManager - All tests run in Chrome Browser
+13:56:48.002  INFO  manager.ApplicationManager - The link --->https://telranedu.web.app/home
+13:56:48.069  INFO  tests.TestBase - Name of method ---> removeFirstContact
+13:56:53.896  INFO  tests.TestBase - Before method logged in account with data ---> email: 'ssa@gmail.com', password: 'Ssa12345$'
+13:57:02.422  INFO  manager.HelperBase - Added 3 contacts
+13:57:02.442  INFO  tests.TestBase - Number of contacts list before remove ---> 4
+13:57:03.688  INFO  tests.TestBase - Number of contacts list after remove ---> 3
+13:57:03.692  INFO  tests.TestBase - Deleted 1 contact

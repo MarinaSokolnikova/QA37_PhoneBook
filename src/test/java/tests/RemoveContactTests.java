@@ -11,6 +11,7 @@ public class RemoveContactTests extends TestBase{
     public void preCondition(){
         if (!app.getHelperUser().isLogged()){
             app.getHelperUser().login(new User().setEmail("ssa@gmail.com").setPassword("Ssa12345$"));
+            logger.info("Before method logged in account with data ---> email: 'ssa@gmail.com', password: 'Ssa12345$'");
         }
 
         app.getHelperContact().provideContacts();
@@ -31,6 +32,7 @@ public class RemoveContactTests extends TestBase{
         logger.info("Number of contacts list after remove ---> "+contactsCountAfterRemove);
 
         Assert.assertEquals(contactsCountAfterRemove, (contactsCountBeforeRemove-1));
+        logger.info("Deleted 1 contact");
     }
 
     @Test
@@ -38,18 +40,20 @@ public class RemoveContactTests extends TestBase{
 
 
         Assert.assertEquals(app.getHelperContact().removeOneContact(), 1);
+        logger.info("Deleted 1 contact");
     }
 
     @Test
     public void removeAllContacts(){
         // "No contacts Here"
         app.getHelperContact().openContactsForm();
-        while (app.getHelperContact().getContactsCount() >0)
+        while (app.getHelperContact().getContactsCount() > 0)
         {
             app.getHelperContact().removeContact();
             app.getHelperContact().pause(1000);
         }
 
         Assert.assertTrue(app.getHelperUser().noContactsHere());
+        logger.info("Assert check is element with text 'No Contacts Here' present");
     }
 }

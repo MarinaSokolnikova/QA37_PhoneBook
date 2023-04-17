@@ -63,18 +63,19 @@ public class HelperContact extends HelperBase{
             if (getContactsCount() <3){
                 for (int i = 0; i <3; i++) {
                     addContact();
+                    pause(500);
                 }
+                logger.info("Added 3 contacts");
             }
     }
 
     public void addContact() {
-        Random random = new Random();
-        int random2 = random.nextInt(1000);
+        int i = new Random().nextInt(1000);
         Contact contact = Contact.builder()
                 .name("Cris")
                 .lastName("Braun")
-                .phone("917201736102"+ random2)
-                .email("cris" + random2 + "@gmail.com")
+                .phone("917201736102"+ i)
+                .email("cris" + i + "@gmail.com")
                 .address("Rehovot")
                 .build();
         openAddForm();

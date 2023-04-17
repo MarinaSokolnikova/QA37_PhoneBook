@@ -1,0 +1,12 @@
+13:58:07.226  INFO  manager.ApplicationManager - All tests run in Chrome Browser
+13:58:08.711  INFO  manager.ApplicationManager - The link --->https://telranedu.web.app/home
+13:58:08.775  INFO  tests.TestBase - Name of method ---> removeAllContacts
+13:58:14.576  INFO  tests.TestBase - Before method logged in account with data ---> email: 'ssa@gmail.com', password: 'Ssa12345$'
+13:58:26.387  INFO  tests.TestBase - Assert check is element with text 'No Contacts Here' present
+13:58:26.395  INFO  tests.TestBase - Name of method ---> removeFirstContact
+13:58:37.813  INFO  manager.HelperBase - Added 3 contacts
+13:58:37.828  INFO  tests.TestBase - Number of contacts list before remove ---> 3
+13:58:39.029  INFO  tests.TestBase - Number of contacts list after remove ---> 2
+13:58:39.030  INFO  tests.TestBase - Deleted 1 contact
+13:58:39.032  INFO  tests.TestBase - Name of method ---> removeFirstContact2
+13:58:45.120  INFO  manager.HelperBase - Added 3 contacts

@@ -25,7 +25,7 @@ public class RegistrationTests extends TestBase{
 //        int z = (int)System.currentTimeMillis()/1000;
 
         User user = new User().setEmail("ssa"+i+"@gmail.com").setPassword("Ssa12345$");
-        logger.info("Test data ---> email: ssa"+i+"@gmail.com, password: Ssa12345$");
+        logger.info("Test data---> "+user.toString());
 
         app.getHelperUser().openLoginRegistrationForm();
         app.getHelperUser().fillLoginRegistrationForm(user);
@@ -40,8 +40,8 @@ public class RegistrationTests extends TestBase{
 
     @Test
     public void registrationWrongEmail(){
-        logger.info("Test data ---> email: 'ssagmail.com', password: 'Ssa12345$'");
         User user = new User().setEmail("ssagmail.com").setPassword("Ssa12345$");
+        logger.info("Test data---> "+user.toString());
 
         app.getHelperUser().openLoginRegistrationForm();
         app.getHelperUser().fillLoginRegistrationForm(user);
@@ -53,8 +53,8 @@ public class RegistrationTests extends TestBase{
 
     @Test
     public void registrationWrongPassword(){
-        logger.info("Test data ---> email: 'don@gmail.com', password: 'ssa12345$'");
         User user = new User().setEmail("don@gmail.com").setPassword("ssa12345$");
+        logger.info("Test data---> "+user.toString());
 
         app.getHelperUser().openLoginRegistrationForm();
         app.getHelperUser().fillLoginRegistrationForm(user);
@@ -66,8 +66,8 @@ public class RegistrationTests extends TestBase{
 
     @Test
     public void registrationUserRegistered(){
-        logger.info("Test data ---> email: 'ssa@gmail.com', password: 'Ssa12345$'");
         User user = new User().setEmail("ssa@gmail.com").setPassword("Ssa12345$");
+        logger.info("Test data---> "+user.toString());
 
         app.getHelperUser().openLoginRegistrationForm();
         app.getHelperUser().fillLoginRegistrationForm(user);
