@@ -1,5 +1,7 @@
 package tests;
 
+import manager.DataProviderContact;
+import manager.DataProviderUser;
 import models.Contact;
 import models.User;
 import org.openqa.selenium.By;
@@ -20,21 +22,21 @@ public class AddNewContactTests extends TestBase{
         }
     }
 
-    @Test
-    public void addContactSuccessAllFields() {
+    @Test(dataProvider = "contactSuccess", dataProviderClass = DataProviderContact.class)
+    public void addContactSuccessAllFields(Contact contact) {
 
-        Random random = new Random();
-        int randomPhone = random.nextInt(1000);
-        int i = random.nextInt(1000);
-        int randomEmail = random.nextInt(1000);
-        Contact contact = Contact.builder()
-                .name("Bob")
-                .lastName("Smit")
-                .phone("6471746178"+ randomPhone)
-                .email("bob" + randomEmail + "@gmail.com")
-                .address("Tel Aviv")
-                .description("all fields")
-                .build();
+//        Random random = new Random();
+//        int randomPhone = random.nextInt(1000);
+//        int i = random.nextInt(1000);
+//        int randomEmail = random.nextInt(1000);
+//        Contact contact = Contact.builder()
+//                .name("Bob")
+//                .lastName("Smit")
+//                .phone("6471746178"+ randomPhone)
+//                .email("bob" + randomEmail + "@gmail.com")
+//                .address("Tel Aviv")
+//                .description("all fields")
+//                .build();
 
         logger.info("Test data---> "+contact.toString());
 
