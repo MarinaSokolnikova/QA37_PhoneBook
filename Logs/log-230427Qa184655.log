@@ -1,0 +1,18 @@
+18:47:00.118  INFO  manager.ApplicationManager - All tests run in Chrome Browser
+18:47:02.739  INFO  manager.ApplicationManager - The link --->https://telranedu.web.app/home
+18:47:02.787  INFO  manager.ListenerWD - Before Find Elements --->By.xpath: //button[text()='Sign Out']
+18:47:07.859  INFO  manager.ListenerWD - After Find Elements --->By.xpath: //button[text()='Sign Out']
+18:47:07.866  INFO  manager.ListenerWD - List of elements is ---> 0
+18:47:07.875  INFO  manager.ListenerWD - Before Find Element --->By.cssSelector: [href='/login']
+18:47:07.932  INFO  manager.ListenerWD - After Find Element --->By.cssSelector: [href='/login']
+18:47:07.954  INFO  manager.ListenerWD - Location of element(1426, 34)
+18:47:08.055  INFO  manager.ListenerWD - Before Find Element --->By.name: email
+18:47:08.108  INFO  manager.ListenerWD - After Find Element --->By.name: email
+18:47:08.129  INFO  manager.ListenerWD - Location of element(568, 250)
+18:47:08.438  INFO  manager.ListenerWD - Before Find Element --->By.xpath: //input[@name='password']
+18:47:08.481  INFO  manager.ListenerWD - After Find Element --->By.xpath: //input[@name='password']
+18:47:08.501  INFO  manager.ListenerWD - Location of element(568, 320)
+18:47:08.752  INFO  manager.ListenerWD - Before Find Element --->By.xpath: //button[@name='login']
+18:47:08.790  INFO  manager.ListenerWD - After Find Element --->By.xpath: //button[@name='login']
+18:47:08.807  INFO  manager.ListenerWD - Location of element(568, 390)
+18:47:08.871  INFO  tests.TestBase - Before class logged in account with data ---> email: 'ssa@gmail.com', password: 'Ssa12345$'

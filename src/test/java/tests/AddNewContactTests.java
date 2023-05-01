@@ -48,6 +48,19 @@ public class AddNewContactTests extends TestBase{
         logger.info("Assert check is Element contact present");
     }
 
+    @Test(dataProvider = "contactCSV", dataProviderClass = DataProviderContact.class)
+    public void addContactSuccessAllFieldsCSV(Contact contact) {
+
+        logger.info("Test data---> "+contact.toString());
+
+        app.getHelperContact().openAddForm();
+        app.getHelperContact().fillAddForm(contact);
+        app.getHelperContact().submitSave();
+
+        Assert.assertTrue(app.getHelperContact().isContactPresent(contact));
+        logger.info("Assert check is Element contact present");
+    }
+
     @Test
     public void addContactSuccessRequiredFields() {
         Random random = new Random();

@@ -1,0 +1,117 @@
+19:24:19.220  INFO  manager.ApplicationManager - All tests run in Chrome Browser
+19:24:21.196  INFO  manager.ApplicationManager - The link --->https://telranedu.web.app/home
+19:24:21.260  INFO  manager.ListenerWD - Before Find Elements --->By.xpath: //button[text()='Sign Out']
+19:24:26.294  INFO  manager.ListenerWD - After Find Elements --->By.xpath: //button[text()='Sign Out']
+19:24:26.300  INFO  manager.ListenerWD - List of elements is ---> 0
+19:24:26.303  INFO  manager.ListenerWD - Before Find Element --->By.cssSelector: [href='/login']
+19:24:26.358  INFO  manager.ListenerWD - After Find Element --->By.cssSelector: [href='/login']
+19:24:26.380  INFO  manager.ListenerWD - Location of element(1426, 34)
+19:24:26.471  INFO  manager.ListenerWD - Before Find Element --->By.name: email
+19:24:26.529  INFO  manager.ListenerWD - After Find Element --->By.name: email
+19:24:26.549  INFO  manager.ListenerWD - Location of element(568, 250)
+19:24:26.859  INFO  manager.ListenerWD - Before Find Element --->By.xpath: //input[@name='password']
+19:24:26.915  INFO  manager.ListenerWD - After Find Element --->By.xpath: //input[@name='password']
+19:24:26.942  INFO  manager.ListenerWD - Location of element(568, 320)
+19:24:27.203  INFO  manager.ListenerWD - Before Find Element --->By.xpath: //button[@name='login']
+19:24:27.248  INFO  manager.ListenerWD - After Find Element --->By.xpath: //button[@name='login']
+19:24:27.266  INFO  manager.ListenerWD - Location of element(568, 390)
+19:24:27.329  INFO  tests.TestBase - Before class logged in account with data ---> email: 'ssa@gmail.com', password: 'Ssa12345$'
+19:24:27.375  INFO  tests.TestBase - Name of method ---> addContactSuccessAllFieldsCSV
+19:24:27.426  INFO  tests.TestBase - Test data---> Contact(name=Harry, lastName=Potter, phone=12345678910, email=harry@gmail.com, address=NY, description=move)
+19:24:27.427  INFO  manager.ListenerWD - Before Find Element --->By.xpath: //a[@href='/add']
+19:24:28.302  INFO  manager.ListenerWD - After Find Element --->By.xpath: //a[@href='/add']
+19:24:28.321  INFO  manager.ListenerWD - Location of element(1191, 34)
+19:24:28.397  INFO  manager.ListenerWD - Before Find Element --->By.xpath: //input[@placeholder='Name']
+19:24:28.450  INFO  manager.ListenerWD - After Find Element --->By.xpath: //input[@placeholder='Name']
+19:24:28.476  INFO  manager.ListenerWD - Location of element(240, 165)
+19:24:28.742  INFO  manager.ListenerWD - Before Find Element --->By.xpath: //input[@placeholder='Last Name']
+19:24:28.788  INFO  manager.ListenerWD - After Find Element --->By.xpath: //input[@placeholder='Last Name']
+19:24:28.813  INFO  manager.ListenerWD - Location of element(240, 238)
+19:24:29.051  INFO  manager.ListenerWD - Before Find Element --->By.xpath: //input[@placeholder='Phone']
+19:24:29.088  INFO  manager.ListenerWD - After Find Element --->By.xpath: //input[@placeholder='Phone']
+19:24:29.106  INFO  manager.ListenerWD - Location of element(240, 312)
+19:24:29.349  INFO  manager.ListenerWD - Before Find Element --->By.xpath: //input[@placeholder='email']
+19:24:29.389  INFO  manager.ListenerWD - After Find Element --->By.xpath: //input[@placeholder='email']
+19:24:29.407  INFO  manager.ListenerWD - Location of element(240, 385)
+19:24:29.665  INFO  manager.ListenerWD - Before Find Element --->By.xpath: //input[@placeholder='Address']
+19:24:29.703  INFO  manager.ListenerWD - After Find Element --->By.xpath: //input[@placeholder='Address']
+19:24:29.721  INFO  manager.ListenerWD - Location of element(240, 459)
+19:24:29.945  INFO  manager.ListenerWD - Before Find Element --->By.xpath: //input[@placeholder='description']
+19:24:29.982  INFO  manager.ListenerWD - After Find Element --->By.xpath: //input[@placeholder='description']
+19:24:29.998  INFO  manager.ListenerWD - Location of element(240, 533)
+19:24:30.216  INFO  manager.ListenerWD - Before Find Element --->By.xpath: //div[@class='add_form__2rsm2']/button
+19:24:30.255  INFO  manager.ListenerWD - After Find Element --->By.xpath: //div[@class='add_form__2rsm2']/button
+19:24:30.272  INFO  manager.ListenerWD - Location of element(242, 606)
+19:24:30.448  INFO  manager.ListenerWD - Before Find Element --->By.xpath: //div[@class='add_form__2rsm2']/button
+19:24:30.476  INFO  manager.ListenerWD - After Find Element --->By.xpath: //div[@class='add_form__2rsm2']/button
+19:24:30.488  INFO  manager.ListenerWD - Location of element(242, 606)
+19:24:30.546  INFO  manager.ListenerWD - Before Find Elements --->By.xpath: //div[@class='contact-item_card__2SOIM']/h3[text()='12345678910']
+19:24:31.149  INFO  manager.ListenerWD - After Find Elements --->By.xpath: //div[@class='contact-item_card__2SOIM']/h3[text()='12345678910']
+19:24:31.150  INFO  manager.ListenerWD - List of elements is ---> 1
+19:24:31.161  INFO  tests.TestBase - Assert check is Element contact present
+19:24:31.166  INFO  tests.TestBase - Name of method ---> addContactSuccessAllFieldsCSV
+19:24:31.167  INFO  tests.TestBase - Test data---> Contact(name=Molly, lastName=Potter, phone=56752189374, email=molly@gmail.com, address=NY, description=move)
+19:24:31.168  INFO  manager.ListenerWD - Before Find Element --->By.xpath: //a[@href='/add']
+19:24:31.196  INFO  manager.ListenerWD - After Find Element --->By.xpath: //a[@href='/add']
+19:24:31.208  INFO  manager.ListenerWD - Location of element(1204, 34)
+19:24:31.252  INFO  manager.ListenerWD - Before Find Element --->By.xpath: //input[@placeholder='Name']
+19:24:31.283  INFO  manager.ListenerWD - After Find Element --->By.xpath: //input[@placeholder='Name']
+19:24:31.300  INFO  manager.ListenerWD - Location of element(240, 165)
+19:24:31.509  INFO  manager.ListenerWD - Before Find Element --->By.xpath: //input[@placeholder='Last Name']
+19:24:31.535  INFO  manager.ListenerWD - After Find Element --->By.xpath: //input[@placeholder='Last Name']
+19:24:31.554  INFO  manager.ListenerWD - Location of element(240, 238)
+19:24:31.760  INFO  manager.ListenerWD - Before Find Element --->By.xpath: //input[@placeholder='Phone']
+19:24:31.786  INFO  manager.ListenerWD - After Find Element --->By.xpath: //input[@placeholder='Phone']
+19:24:31.801  INFO  manager.ListenerWD - Location of element(240, 312)
+19:24:32.021  INFO  manager.ListenerWD - Before Find Element --->By.xpath: //input[@placeholder='email']
+19:24:32.044  INFO  manager.ListenerWD - After Find Element --->By.xpath: //input[@placeholder='email']
+19:24:32.059  INFO  manager.ListenerWD - Location of element(240, 385)
+19:24:32.275  INFO  manager.ListenerWD - Before Find Element --->By.xpath: //input[@placeholder='Address']
+19:24:32.299  INFO  manager.ListenerWD - After Find Element --->By.xpath: //input[@placeholder='Address']
+19:24:32.313  INFO  manager.ListenerWD - Location of element(240, 459)
+19:24:32.519  INFO  manager.ListenerWD - Before Find Element --->By.xpath: //input[@placeholder='description']
+19:24:32.558  INFO  manager.ListenerWD - After Find Element --->By.xpath: //input[@placeholder='description']
+19:24:32.573  INFO  manager.ListenerWD - Location of element(240, 533)
+19:24:32.790  INFO  manager.ListenerWD - Before Find Element --->By.xpath: //div[@class='add_form__2rsm2']/button
+19:24:32.813  INFO  manager.ListenerWD - After Find Element --->By.xpath: //div[@class='add_form__2rsm2']/button
+19:24:32.831  INFO  manager.ListenerWD - Location of element(242, 606)
+19:24:32.944  INFO  manager.ListenerWD - Before Find Element --->By.xpath: //div[@class='add_form__2rsm2']/button
+19:24:32.969  INFO  manager.ListenerWD - After Find Element --->By.xpath: //div[@class='add_form__2rsm2']/button
+19:24:32.980  INFO  manager.ListenerWD - Location of element(242, 606)
+19:24:33.032  INFO  manager.ListenerWD - Before Find Elements --->By.xpath: //div[@class='contact-item_card__2SOIM']/h3[text()='56752189374']
+19:24:33.445  INFO  manager.ListenerWD - After Find Elements --->By.xpath: //div[@class='contact-item_card__2SOIM']/h3[text()='56752189374']
+19:24:33.446  INFO  manager.ListenerWD - List of elements is ---> 1
+19:24:33.446  INFO  tests.TestBase - Assert check is Element contact present
+19:24:33.447  INFO  tests.TestBase - Name of method ---> addContactSuccessAllFieldsCSV
+19:24:33.449  INFO  tests.TestBase - Test data---> Contact(name=Sara, lastName=Potter, phone=376154648377, email=sara@gmail.com, address=NY, description=move)
+19:24:33.449  INFO  manager.ListenerWD - Before Find Element --->By.xpath: //a[@href='/add']
+19:24:33.477  INFO  manager.ListenerWD - After Find Element --->By.xpath: //a[@href='/add']
+19:24:33.489  INFO  manager.ListenerWD - Location of element(1204, 34)
+19:24:33.536  INFO  manager.ListenerWD - Before Find Element --->By.xpath: //input[@placeholder='Name']
+19:24:33.560  INFO  manager.ListenerWD - After Find Element --->By.xpath: //input[@placeholder='Name']
+19:24:33.575  INFO  manager.ListenerWD - Location of element(240, 165)
+19:24:33.780  INFO  manager.ListenerWD - Before Find Element --->By.xpath: //input[@placeholder='Last Name']
+19:24:33.806  INFO  manager.ListenerWD - After Find Element --->By.xpath: //input[@placeholder='Last Name']
+19:24:33.821  INFO  manager.ListenerWD - Location of element(240, 238)
+19:24:34.073  INFO  manager.ListenerWD - Before Find Element --->By.xpath: //input[@placeholder='Phone']
+19:24:34.102  INFO  manager.ListenerWD - After Find Element --->By.xpath: //input[@placeholder='Phone']
+19:24:34.121  INFO  manager.ListenerWD - Location of element(240, 312)
+19:24:34.394  INFO  manager.ListenerWD - Before Find Element --->By.xpath: //input[@placeholder='email']
+19:24:34.419  INFO  manager.ListenerWD - After Find Element --->By.xpath: //input[@placeholder='email']
+19:24:34.435  INFO  manager.ListenerWD - Location of element(240, 385)
+19:24:34.686  INFO  manager.ListenerWD - Before Find Element --->By.xpath: //input[@placeholder='Address']
+19:24:34.711  INFO  manager.ListenerWD - After Find Element --->By.xpath: //input[@placeholder='Address']
+19:24:34.727  INFO  manager.ListenerWD - Location of element(240, 459)
+19:24:34.944  INFO  manager.ListenerWD - Before Find Element --->By.xpath: //input[@placeholder='description']
+19:24:34.967  INFO  manager.ListenerWD - After Find Element --->By.xpath: //input[@placeholder='description']
+19:24:34.981  INFO  manager.ListenerWD - Location of element(240, 533)
+19:24:35.189  INFO  manager.ListenerWD - Before Find Element --->By.xpath: //div[@class='add_form__2rsm2']/button
+19:24:35.211  INFO  manager.ListenerWD - After Find Element --->By.xpath: //div[@class='add_form__2rsm2']/button
+19:24:35.225  INFO  manager.ListenerWD - Location of element(242, 606)
+19:24:35.359  INFO  manager.ListenerWD - Before Find Element --->By.xpath: //div[@class='add_form__2rsm2']/button
+19:24:35.381  INFO  manager.ListenerWD - After Find Element --->By.xpath: //div[@class='add_form__2rsm2']/button
+19:24:35.394  INFO  manager.ListenerWD - Location of element(242, 606)
+19:24:35.447  INFO  manager.ListenerWD - Before Find Elements --->By.xpath: //div[@class='contact-item_card__2SOIM']/h3[text()='376154648377']
+19:24:35.858  INFO  manager.ListenerWD - After Find Elements --->By.xpath: //div[@class='contact-item_card__2SOIM']/h3[text()='376154648377']
+19:24:35.858  INFO  manager.ListenerWD - List of elements is ---> 1
+19:24:35.858  INFO  tests.TestBase - Assert check is Element contact present

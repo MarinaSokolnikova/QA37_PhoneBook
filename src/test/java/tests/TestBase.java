@@ -2,6 +2,7 @@ package tests;
 
 import manager.ApplicationManager;
 import org.openqa.selenium.Alert;
+import org.openqa.selenium.remote.Browser;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.slf4j.Logger;
@@ -21,7 +22,7 @@ public class TestBase {
    public void startLogger(Method m){
       logger.info("Name of method ---> "+m.getName());
    }
-   static ApplicationManager app = new ApplicationManager();
+   static ApplicationManager app = new ApplicationManager(System.getProperty("browser", Browser.CHROME.browserName()));
    @BeforeSuite
    public void setUp(){
        app.init();
@@ -29,7 +30,7 @@ public class TestBase {
 
    @AfterSuite
    public void tearDown(){
-       //app.stop();
+       app.stop();
    }
 
 
