@@ -14,7 +14,7 @@ import java.util.Random;
 
 public class AddNewContactTests extends TestBase{
 
-    @BeforeClass
+    @BeforeClass(alwaysRun = true)
     public void preCondition(){
         if (!app.getHelperUser().isLogged()){
             app.getHelperUser().login(new User().setEmail("ssa@gmail.com").setPassword("Ssa12345$"));
@@ -61,7 +61,7 @@ public class AddNewContactTests extends TestBase{
         logger.info("Assert check is Element contact present");
     }
 
-    @Test
+    @Test(groups = {"smoke", "regress", "retest"})
     public void addContactSuccessRequiredFields() {
         Random random = new Random();
         int randomPhone = random.nextInt(1000);

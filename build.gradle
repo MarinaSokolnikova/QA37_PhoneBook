@@ -26,6 +26,22 @@ test {
     useTestNG()
 }
 
+task scoup (type: Test){
+    useTestNG(){
+        suites 'src/test/resources/scoup.xml'
+    }
+}
+
+task team(type: Test){
+    useTestNG(){
+        def groups = System.getProperty('groups')
+        if (groups != null) {
+            includeGroups groups
+        }
+        suites 'src/test/resources/base.xml'
+    }
+}
+
 task qa(type:Test){
     useTestNG(){
         def suite = System.getProperty('suite', '')

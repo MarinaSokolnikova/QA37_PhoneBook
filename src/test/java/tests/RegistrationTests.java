@@ -8,7 +8,7 @@ import org.testng.annotations.Test;
 import java.util.Random;
 
 public class RegistrationTests extends TestBase{
-    @BeforeMethod
+    @BeforeMethod(alwaysRun = true)
     public void preCondition(){
         if (app.getHelperUser().isLogged())
         {
@@ -38,7 +38,7 @@ public class RegistrationTests extends TestBase{
         logger.info("Assert check is element with text 'No Contacts Here' present");
     }
 
-    @Test
+    @Test(groups = {"smoke"})
     public void registrationWrongEmail(){
         User user = new User().setEmail("ssagmail.com").setPassword("Ssa12345$");
         logger.info("Test data---> "+user.toString());
